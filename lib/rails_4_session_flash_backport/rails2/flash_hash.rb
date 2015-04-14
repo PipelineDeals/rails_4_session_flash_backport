@@ -73,10 +73,7 @@ end
 # This magic here allows us to unmarshal a Rails 3.2 ActionDispatch::Flash::FlashHash
 module ActionDispatch
   class Flash
-    class FlashHash
-      def self._load(args)
-        {}
-      end
+    class FlashHash < Hash
     end
   end
 end
